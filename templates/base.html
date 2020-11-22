@@ -21,7 +21,6 @@
             <!-- 1-ый вариант -->
             <a class="nav-link" href="/departure/{{ key }}" >{{ value }}</a>
             <!-- 2-ой вариант -->
-            <a class="{% if request.path == departure/{{ key }} %}active{% endif %}" href="/departure/{{ key }}" >{{ value }}</a>
           </li>
           {% endfor %}
         </ul>
