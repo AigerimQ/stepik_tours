@@ -1,0 +1,18 @@
+<!-- CARDS -->
+    <div class="row mt-5">
+      {% for tour_id, tour in tours.items %}
+      <div class="col-4">
+        <div class="card mb-4">
+          <div class="embed-responsive embed-responsive-16by9">
+            <img class="card-img-top embed-responsive-item" src="{{ tour.picture }}/300x200" alt="" >
+          </div>
+          <div class="card-body">
+            <h2 class="h5 card-title">{{ tour.title }} <a>{{ tour.stars }}★ </a></h2>
+            <p class="card-text">{{ tour.description|slice:":150" }}...</p>
+            <p class="h5 card-title">{{ tour.date }}, {{ tour.nights }} ночей, {{ tour.price }} P</p>
+            <a href="/tour/{{ tour_id }}" class="btn btn-sm btn-primary">Подробнее</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
